@@ -66,7 +66,7 @@ def generate_pie_chart(city):
                  hover_name=crime_labels, labels={'label': 'Crime'}, hole=0.3, color_discrete_sequence=custom_colors)
     fig.update_traces(textposition='inside', textinfo='percent+label')
     fig.update_layout(showlegend=False, title_x=0.5,
-                      title_font_size=24)  # Increase title font size
+                      title_font_size=24, plot_bgcolor='#AEC9AD', paper_bgcolor='#AEC9AD')  # Set background color
 
     # fig.show()
     fig.write_image('chart.png')
