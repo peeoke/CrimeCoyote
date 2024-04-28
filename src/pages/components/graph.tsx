@@ -21,9 +21,9 @@ const ChartComponent = () => {
   }, []);
 
   return (
-    <div>
+    <div className="w-full float-left px-20 py-40">
       {chartUrl ? (
-        <img src={chartUrl} alt="Chart" />
+        <img src="http://127.0.0.1:5000/graph" ></img>
       ) : (
         <p>Loading chart...</p>
       )}

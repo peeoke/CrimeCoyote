@@ -39,15 +39,13 @@ def get_top_crimes(city_name):
         return "City not found in the dataset."
 
 
-# Prompt the user to enter a city name
-city_input = input("Enter a city: ")
-
 # Get the top crimes for the entered city
-
-top_crimes = get_top_crimes(city_input)
-print(f"The top crimes in {city_input} are:")
-for crime_name in top_crimes.index:
-    print(crime_name)
+def top_crimes():
+    city_input = input("Enter a city: ") #delete
+    top_crimes = get_top_crimes(city_input)
+    print(f"The top crimes in {city_input} are:")
+    for crime_name in top_crimes.index:
+        print(crime_name)
 
 # Function to generate interactive pie chart for a given city
 
@@ -70,5 +68,5 @@ def generate_pie_chart(city):
     fig.update_layout(showlegend=False, title_x=0.5,
                       title_font_size=24)  # Increase title font size
 
-    fig.show()
-    return fig.write_img('chart.png')
+    # fig.show()
+    fig.write_image('chart.png')

@@ -6,23 +6,6 @@ export interface City {
 
 const City = () => {
   const [data, setData] = useState(null)
-
-    // const getCity = async () => {
-    //   try {
-    //     const response = await fetch('http://127.0.0.1:5000/result');
-    //     if (!response.ok) {
-    //       throw new Error('Failed to fetch data');
-    //     }
-    //     .then
-
-    //     setData(jsonData);
-    //   } catch (error) {
-    //     console.error('Error fetching data:', error);
-    //     return null;
-    //   }
-    // }
-
-
     useEffect(() => {
         
     const getCity = async () => {
@@ -39,9 +22,12 @@ const City = () => {
       }, []);
       console.log(data)
     return (
-      <div className="text-black lowercase">
+      <div>
       {data ? (
-        <h1> {data?.City} </h1>
+        <div> 
+          <h1 className="text-black px-20 py-40 text-4xl"> {data?.City} </h1>
+          <p className="text-black px-20 py-40 text-1xl"> {data?.Ranking} </p>
+        </div>
       ) : (
         <p>Loading...</p>
       )}
