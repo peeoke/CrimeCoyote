@@ -1,18 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import SearchBar from './componenets/search';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Home from './pages/home';
+import About from './pages/about';
+import CityStats from './pages/city-stats'
+import Menu from './pages/components/menu';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div className="search-page">
-        <SearchBar />
-      </div>
-    </div>
-  )
-}
+    <Router>
+      <Menu />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/city-stats" element={<CityStats />} />
+        </Routes>
+    </Router>
+  );
+};
 
 export default App
