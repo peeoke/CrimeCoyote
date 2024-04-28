@@ -71,4 +71,5 @@ def generate_pie_chart(city):
                       title_font_size=24)  # Increase title font size
 
     fig.show()
+    return fig.write_img('chart.png')
 

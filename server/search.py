@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import data
 
 app = Flask(__name__)
 CORS(app)
@@ -21,6 +22,10 @@ def search():
 @app.route('/result')
 def result():
     return jsonify({'City': city['Name']})
+
+@app.route('/graph')
+def graph():
+    return data.generate_pie_chart(city['Name'])
 
 if __name__ == '__main__':
     app.run(debug=True)

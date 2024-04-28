@@ -4,7 +4,7 @@ const Home = () => {
     return (
         <div className="App">
             <div className="search-page">
-            <SearchBar />
+                <SearchBar />
             </div>
         </div>
     );

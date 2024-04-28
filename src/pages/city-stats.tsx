@@ -1,9 +1,11 @@
 import City from './components/city';
+import Graph from './components/graph'
 
 const cityStats = () => {
     return (
-        <div>
-            <City />
+        <div className="city-info">
+            <Graph />
+            <h1 className="city-name"> <City /> </h1>
         </div>
     );
   };
