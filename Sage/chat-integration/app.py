@@ -23,5 +23,5 @@ def api():
         return 'Failed to generate response!'
     
 if __name__=='__main__':
-    app.run(port=50001)
+    app.run(port=5001)
 
