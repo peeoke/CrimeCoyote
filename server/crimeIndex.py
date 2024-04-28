@@ -1,5 +1,5 @@
 import pandas as pd
-crime_index = pd.read_csv('/Users/julzhusainzada/Desktop/CA City Crimes - Sheet1.csv')
+crime_index = pd.read_csv('City Crimes Rating.csv')
 
 print(crime_index)
 
