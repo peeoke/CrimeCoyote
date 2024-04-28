@@ -2,7 +2,7 @@ import pandas as pd
 import plotly.express as px
 
 # crime_df = pd.read_csv('/Users/julzhusainzada/Desktop/california.csv')
-crime_df = pd.read_csv('/Users/am/safeswandavishacks/SafeSwan-1/datasets/California Crimes.csv')
+crime_df = pd.read_csv('California Crimes.csv')
 
 # Dropping first three rows bc no data in them
 crime_df = crime_df.drop([0, 1, 2, 3])
@@ -72,4 +72,3 @@ def generate_pie_chart(city):
 
     fig.show()
     return fig.write_img('chart.png')
-
