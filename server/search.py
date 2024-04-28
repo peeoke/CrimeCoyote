@@ -17,7 +17,7 @@ def search():
     data = request.json
     query = data.get('query')
     city['Name'] = query
-    city['Ranking'] = crimeIndex.get_crime_rating()
+    city['Ranking'] = crimeIndex.get_crime_rating(query)
     print(query)
     return jsonify({'result': query})
 
